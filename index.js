@@ -1,10 +1,11 @@
 const express = require("express");
+const path = require("path");
 const QR = require("./src/qr_code"); 
 const app = express();
 const port = process.env.PORT || 1801;
 
 app.use(express.json());
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 app.get("/qr", (req, res)=>{
     const code = req.query.code;
@@ -12,11 +13,13 @@ app.get("/qr", (req, res)=>{
 });
 
 app.get("/", (req, res)=>{
-    res.json({
-        server_response:{
-            error: "URL not found"
-        }
-    });
+
+    res.sendFile(path.resolve(__dirname,'index.html'));
+    // res.json({
+    //     server_response:{
+    //         error: "URL not found"
+    //     }
+    // });
 });
 
 app.listen(port, ()=>{
