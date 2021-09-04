@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/qr.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>QRCode - API</title>
+</head>
+<body onscroll="">
+    <header class="_header">
+        <h4 class="_title"><img src="./img/qr.png" alt="page_logo" height="25">&nbsp;QRCode<span>API</span></h4>
+        <a class="_link"href="https://github.com/VidalLeonardoDeLosSantosRincon" target="_blank"><img src="./img/github.png" alt="github_icon" height="22">&nbsp;<code>Vidal De Los Santos</code></a>
+    </header>
+    <div class="_ctr">
+
+    </div>
+    <footer class="_footer">
+        <p>Vidal De Los Santos</p>
+    </footer>
+    <script>
+        (function(){
+            let _header = document.getElementsByClassName('_header')[0];
+            setInterval(()=>{
+                if(window.scrollY > 50){
+                    _header.style.background = "rgba(255, 255, 255, 0.05)";
+                    _header.style.transition = "all 0.5s ease-in";
+                    _header.style.boxShadow ="none";
+                    
+                }else{
+                    _header.style.background = "white";
+                    _header.style.boxShadow ="2px 2px 5px rgba(0, 0, 0, 0.2)";
+                }
+            }, 500);
+        })();
+    </script>
+</body>
+
+</html>
