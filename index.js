@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 app.use(cors({origin:'*'}));
 
-app.get("/qr", (req, res)=>{
+app.get("/qr", cors(), (req, res)=>{
     const code = req.query.code;
     QR.generateQRCode(res, code);
 });
