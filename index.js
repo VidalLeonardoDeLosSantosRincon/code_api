@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require("path");
+const cors = require('cors');
 const QR = require("./src/qr_code"); 
 const app = express();
 const port = process.env.PORT || 1801;
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
+app.use(cors({orign:'*'}));
 
 app.get("/qr", (req, res)=>{
     const code = req.query.code;
