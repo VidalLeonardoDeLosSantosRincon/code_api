@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 1801;
 
 app.use(express.json());
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 app.get("/qr", (req, res)=>{
     const code = req.query.code;
@@ -13,8 +13,11 @@ app.get("/qr", (req, res)=>{
 });
 
 app.get("/", (req, res)=>{
-
-    res.sendFile(path.resolve(__dirname,'index.html'));
+    res.json({
+        server_message: __dirname
+    });
+    //console.log(`URL: ${__dirname}`);
+    //res.sendFile(path.resolve(__dirname,'index.html'));
     // res.json({
     //     server_response:{
     //         error: "URL not found"
