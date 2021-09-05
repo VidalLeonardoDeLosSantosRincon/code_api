@@ -13,16 +13,7 @@ app.get("/qr", (req, res)=>{
 });
 
 app.get("/", (req, res)=>{
-    // res.json({
-    //     server_message: __dirname
-    // });
-    //console.log(`URL: ${__dirname}`);
     res.sendFile(path.resolve('index.html'));
-    // res.json({
-    //     server_response:{
-    //         error: "URL not found"
-    //     }
-    // });
 });
 
 app.listen(port, ()=>{
