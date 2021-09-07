@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/qr.png">
     <link rel="stylesheet" href="./css/styles.css">
+
     <title>QRCode - API</title>
 </head>
 <body onscroll="">
@@ -14,11 +15,17 @@
         <a class="_link"href="https://github.com/VidalLeonardoDeLosSantosRincon" target="_blank"><img src="./img/github.png" alt="github_icon" height="22">&nbsp;<code>Vidal De Los Santos</code></a>
     </header>
     <div class="_ctr">
-        
+        <div class="_ctr_form">
+            <form id="qrform" onsubmit="_getQrCode(event);">
+                <input type="text" name="code" placeholder="Text">
+                <input type="submit" value="get Qr Code">
+            </form>
+        </div>
     </div>
     <footer class="_footer">
         <p>Vidal De Los Santos</p>
     </footer>
+    <script src="js/getQrCode.js"></script>
     <script src="js/hideHeaderOnScroll.js"></script>
 </body>
 
