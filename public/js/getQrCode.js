@@ -4,9 +4,9 @@ async function _getQrCode(event){
     let form = document.getElementById("qrform");
     let formData = new FormData(form);
     let data = Object.fromEntries(formData.entries());
- 
+
     console.log(data);
-    if(data.code.trim() === ""){
+    if(data.code.trim() !== ""){
         const urlParams = new URLSearchParams(data);
         console.log(data);
         const url = `https://qrcodes-api.herokuapp.com/qr?${urlParams}`;
