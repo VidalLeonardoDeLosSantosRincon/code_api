@@ -70,7 +70,7 @@
 
 ._ctr ._ctr_form {
     background-color:white;
-    height:300px;
+    min-height:300px;
     width:350px;
     padding:10px;
     margin:0 25px;
@@ -78,8 +78,9 @@
     box-shadow:2px 2px 10px rgba(0, 0, 0, 0.2);
 
     display:flex;
+    flex-direction:column;
     justify-content:center;
-    align-items:flex-start;
+    align-items:center;
 }
 
 ._ctr ._ctr_form #qrform{
@@ -114,6 +115,22 @@
 
 ._ctr ._ctr_form #qrform input[type="submit"]:hover{
     
+}
+
+._ctr ._ctr_form #result_box {
+    padding:5px;
+    background:lightgray;
+    width:100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._ctr ._ctr_form #qr_code {
+    border-radius:5px;
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.2);
+    border:0.5px solid rgba(0, 0, 0, 0.1);
 }
 
 ._footer{
