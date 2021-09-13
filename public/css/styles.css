@@ -64,7 +64,9 @@
     box-sizing:border-box;
 
     display:flex;
-    justify-content:flex-start;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content:space-around;
     align-items:center;
 }
 
@@ -131,6 +133,15 @@
     border-radius:5px;
     box-shadow:2px 2px 5px rgba(0, 0, 0, 0.2);
     border:0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+
+._ctr ._ctr_code_ex {
+    width:450px;
+    height:300px;
+    background:rgba(0, 0, 0, 0.9);
+    padding:5px;
+    border-radius:4px;
 }
 
 ._footer{
