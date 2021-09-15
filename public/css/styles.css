@@ -152,10 +152,24 @@
 }
 
 ._ctr ._ctr_code_ex #code_example {
+    color:lightseagreen;
+    padding:5px 10px;
     border-radius:5px;
     width:100%;
     height:80%;
     background:#273746;
+}
+
+._ctr ._ctr_code_ex #code_example .object_entry {
+    word-break: break-all;
+    font-size:12px;
+    margin:5px 0;
+}
+
+._ctr ._ctr_code_ex #code_example .object_entry .object_key{
+    font-size:16px;
+    color:orange;
+    font-weight: bold;
 }
 
 ._footer{
